@@ -28,14 +28,14 @@ namespace APIVersioning.Controllers
 
         [HttpGet("GetProduct")]
         [MapToApiVersion("2.0")]
-        public IActionResult GetProductsV2() // While calling this method 'GetProductsV2' is not being used. use api/v2.0/products
+        public IActionResult GetProductsV2() // While calling this method 'GetProductsV2' is not being used. use api/v2/products
         {
             return Ok(new { productName = "Pen", Price = 10, Version = "2.0" });
         }
 
         [HttpGet("GetProduct")]
         [MapToApiVersion("3.0")]
-        public IActionResult GetProductsV3() // While calling this method 'GetProductsV2' is not being used. use api/v2.0/products
+        public IActionResult GetProductsV3() // While calling this method 'GetProductsV3' is not being used. use api/v3.0/products
         {
             return Ok(new { productName = "Pen", Price = 10, Version = "3.0" }); 
         }
